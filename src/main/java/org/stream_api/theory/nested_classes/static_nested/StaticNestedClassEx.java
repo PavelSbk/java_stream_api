@@ -1,4 +1,4 @@
-package org.streamapi.theory.nestedclasses.staticnested;
+package org.stream_api.theory.nested_classes.static_nested;
 
 /**
  * Статические вложенные классы

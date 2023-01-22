@@ -1,4 +1,4 @@
-package org.streamapi.theory.nestedclasses;
+package org.stream_api.theory.nested_classes;
 
 /**
  * Существует четыре категории вложенных классов:

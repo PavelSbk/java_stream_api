@@ -1,4 +1,4 @@
-package org.streamapi.theory.nestedclasses.inner;
+package org.stream_api.theory.nested_classes.inner;
 
 /**
  * Inner class - это нестатический вложенный класс и всегда жестко связан со своим внешним классом
