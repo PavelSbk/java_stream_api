@@ -10,8 +10,8 @@ import java.util.function.Consumer;
  * void accept(T t);
  * <p>
  * default Consumer<T> andThen(Consumer<? super T> after) {
- * Objects.requireNonNull(after);
- * return (T t) -> { accept(t); after.accept(t);};
+ *      Objects.requireNonNull(after);
+ *      return (T t) -> { accept(t); after.accept(t);};
  * }
  * <p>
  * Consumer — это функциональный интерфейс, который принимает один параметр на вход
@@ -50,6 +50,17 @@ public class ConsumerEx {
             car.engine = 2.6;
             System.out.println("Car " + car + " just upgraded");
         });
+        /**
+         * Перекрасить все авто в розовый цвет
+         */
+        System.out.println("=== Перекрасить все авто в розовый цвет ===");
+        cars.forEach(car -> car.color = "Pink");
+        cars.forEach(System.out::println);
+        System.out.println("=== Перекрасить все авто в красный цвет и увеличить двигатель до 3.2 ===");
+        Consumer<Car> paintRed = car -> car.color = "Red";
+        Consumer<Car> upgradeEngine = car -> car.engine = 3.2;
+        cars.forEach(paintRed.andThen(upgradeEngine));
+        cars.forEach(System.out::println);
     }
 }
 
