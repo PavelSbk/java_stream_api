@@ -3,6 +3,7 @@ package org.stream_api.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Student {
 
@@ -62,6 +63,14 @@ public class Student {
         }
     }
 
+    public void testStudents(List<Student> students, Predicate<Student> pr) {
+        for (Student s : students) {
+            if (pr.test(s)) {
+                System.out.println(s);
+            }
+        }
+    }
+
     public List<Student> createListOfStudents() {
         return List.of(
                 new Student("Ivan", "Kozlov", 'M', 22, 3, 8.3),
@@ -69,7 +78,7 @@ public class Student {
                 new Student("Nina", "Ivanova", 'F', 18, 1, 7.9),
                 new Student("Elena", "Fedorova", 'F', 19, 1, 8.9),
                 new Student("Petr", "Kirilov",'M', 35, 4, 7.3),
-                new Student("Maria", "Simonova",'F', 23, 3, 9.1),
+                new Student("Maria", "Simonova",'F', 22, 4, 9.1),
                 new Student("Maria", "Smirnova",'F', 23, 5, 8.1)
         );
     }
