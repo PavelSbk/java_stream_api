@@ -45,6 +45,25 @@ public class SupplierEx {
     public static void main(String[] args) {
         List<Car> cars = createThreeCar(() -> new Car("Volvo", "Black", 2.4));
         cars.forEach(System.out::println);
+        System.out.println("==== Random Integer ====");
+        Supplier<Integer> sup1 = SupplierEx::getRandomInt;
+        Supplier<Integer> sup2 = () -> (int) (Math.random() * 10);
+        System.out.println(sup1.get());
+        System.out.println(sup2.get());
+        /**
+         * Самая частая реализация Supplier - это ленивое создание объекта,
+         * т.е. объект создаётся только при вызове метода get() в реализации интерфейса Supplier.
+         * Если метод не вызывается - объект не создаётся, так как реализация интерфейса Supplier
+         * хранит только ссылку на конструктор.
+         */
+        System.out.println("==== Created empty List ====");
+        Supplier<List<String>> supplier = ArrayList::new;
+        List<String> list = supplier.get();
+        System.out.println(list);
+    }
+
+    public static Integer getRandomInt() {
+        return (int) (Math.random() * 10);
     }
 }
 

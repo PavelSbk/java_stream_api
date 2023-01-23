@@ -3,6 +3,7 @@ package org.stream_api.theory.lambda;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 /**
  * public interface Consumer<T> {
@@ -28,6 +29,12 @@ import java.util.function.Consumer;
  */
 
 public class ConsumerEx {
+
+    Predicate<Integer> pr = n -> n > 0;
+
+    private static boolean check(Predicate<Integer> predicate, int num) {
+        return predicate.test(num);
+    }
 
     /**
      * Что именно делает метод с объектом Car, будет задано внутри самого метода
@@ -61,6 +68,7 @@ public class ConsumerEx {
         Consumer<Car> upgradeEngine = car -> car.engine = 3.2;
         cars.forEach(paintRed.andThen(upgradeEngine));
         cars.forEach(System.out::println);
+        Predicate<Integer> pr = n -> n > 0;
     }
 }
 
