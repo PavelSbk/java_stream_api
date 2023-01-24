@@ -3,7 +3,6 @@ package org.stream_api.theory.streams;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * MAP
@@ -18,7 +17,7 @@ import java.util.stream.Stream;
  * который получатся после применения на нём действий, описанных внутри map()
  */
 
-public class StreamMap {
+public class MapM {
 
     public static void main(String[] args) {
         List<String> list = new ArrayList<>(List.of(

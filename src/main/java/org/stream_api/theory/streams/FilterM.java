@@ -18,7 +18,7 @@ import java.util.List;
  * чтобы передать их терминальному методу
  */
 
-public class StreamFilter {
+public class FilterM {
 
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>(new Student().createListOfStudents());

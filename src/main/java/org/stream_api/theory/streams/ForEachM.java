@@ -10,7 +10,7 @@ import java.util.Arrays;
  * >>> set.stream().forEach((p) -> p.append("_2"))
  */
 
-public class StreamForEach {
+public class ForEachM {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 78, 77, 88, 81};
