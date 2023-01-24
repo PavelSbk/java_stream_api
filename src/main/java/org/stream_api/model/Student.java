@@ -1,11 +1,11 @@
 package org.stream_api.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
 public class Student {
+
+    LearningForm learningForm;
 
     String name;
 
@@ -117,6 +117,14 @@ public class Student {
 
     public double getAvgGrade() {
         return avgGrade;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public void setAvgGrade(double avgGrade) {
