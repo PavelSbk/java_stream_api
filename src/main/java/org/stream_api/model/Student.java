@@ -137,6 +137,8 @@ public class Student {
                 +
                 "name = '" + name + '\''
                 +
+                ", surname = '" + surname + '\''
+                +
                 ", sex = " + sex
                 +
                 ", age = " + age

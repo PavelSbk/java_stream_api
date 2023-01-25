@@ -8,7 +8,9 @@ import java.util.stream.Collectors;
 /**
  * SORTED
  * Конвейерный метод:
- * <p>
+ *
+ * .sorted(Comparator.comparingInt(Student::getAge)) Пример
+ *
  * sorted - отсортирует элементы в естественном порядке; можно использовать Comparator
  * >>> collection.stream().sorted().collect(Collectors.toList())
  */
