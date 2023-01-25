@@ -25,7 +25,7 @@ public class DistinctM {
         stream3.distinct().forEach(System.out::println);
         System.out.println("==============");
         String[] arr = {"s", "i", "l", "l", "y"};
-        Arrays.stream(arr).distinct().forEach(System.out::println);
+        Arrays.stream(arr).distinct().forEach(e -> System.out.println(e));
         System.out.println("==============");
         List<Student> students = new ArrayList<>(new Student().createListOfStudents());
         students.add(new Student("Ivan", "Kozlov", 'M', 22, 3, 8.3));

@@ -1,6 +1,7 @@
 package org.stream_api.model;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 public class Student {
@@ -148,5 +149,24 @@ public class Student {
                 ", avgGrade = " + avgGrade
                 +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return sex == student.sex
+                && age == student.age
+                && course == student.course
+                && Double.compare(student.avgGrade, avgGrade) == 0
+                && learningForm == student.learningForm
+                && Objects.equals(name, student.name)
+                && Objects.equals(surname, student.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(learningForm, name, surname, sex, age, course, avgGrade);
     }
 }
