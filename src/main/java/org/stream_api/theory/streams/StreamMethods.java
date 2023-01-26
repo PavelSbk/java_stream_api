@@ -1,7 +1,5 @@
 package org.stream_api.theory.streams;
 
-import java.util.Arrays;
-
 /**
  * Пакет java.util.stream содержит классы для поддержки операций с потоками элементов в функциональном стиле.
  * Ключевой абстракцией, введенной в этом пакете, является Поток.
@@ -104,5 +102,5 @@ import java.util.Arrays;
  * groupingBy — если необходимо разбить коллекцию на части.
  */
 
-public class StreamIntro {
+public class StreamMethods {
 }
