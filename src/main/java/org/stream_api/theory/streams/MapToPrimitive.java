@@ -3,6 +3,7 @@ package org.stream_api.theory.streams;
 import org.stream_api.model.Student;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,5 +51,19 @@ public class MapToPrimitive {
                 .mapToDouble(Student::getAge)
                 .average().getAsDouble();
         System.out.println(avrAge);
+        /**
+         * Получить массив Integer из массива int
+         */
+        int[] intArr = {1, 2, 3, 4};
+        Integer[] integerArr = Arrays.stream(intArr).boxed().toArray(Integer[]::new);
+        for (Integer i : integerArr) {
+            System.out.println(i);
+        }
+
+        int[][] ints = {{1,2}, {3,4}, {5, 6}, {7}};
+        Integer[] integers = Arrays.stream(ints).flatMapToInt(Arrays::stream).boxed().toArray(Integer[]::new);
+        for (Integer i : integers) {
+            System.out.println(i);
+        }
     }
 }
